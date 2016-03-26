@@ -20,11 +20,9 @@ if (mysql_num_rows($result) > 0) {
     while ($row = mysql_fetch_array($result)) {
         // temp user array
         $holes = array();
-        $holes["pid"] = $row["pid"];
         $holes["lat"] = $row["lat"];
         $holes["lng"] = $row["lng"];
 	$holes["pothole"]= $row["pothole"];
-        $holes["created_at"] = $row["created_at"];
  
         // push single product into final response array
         array_push($response["holes"], $holes);
