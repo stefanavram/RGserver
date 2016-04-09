@@ -29,7 +29,6 @@ drop();
 }
 
 
-
 function addMarkerWithTimeout(position, timeout) {
   window.setTimeout(function() {
       markers.push(new google.maps.Marker({
@@ -41,7 +40,7 @@ function addMarkerWithTimeout(position, timeout) {
 }
 
 function drop() {
-   $.getJSON("http://roadgems.ml/get_all_potholes.php", function(json){
+   $.getJSON("get_all_potholes.php", function(json){
 	
         holes = json["holes"];
 	for (var i = 0; i < holes.length; i++) {

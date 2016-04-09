@@ -49,7 +49,7 @@ function drop() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-         $.post("http://roadgems.ml/get_nearby_potholes.php", {
+         $.post("get_nearby_potholes.php", {
             lat: pos.lat,
             lng: pos.lng,
         },
@@ -61,7 +61,7 @@ function drop() {
         }, "json");
 	})
     } else{
-        $.post("http://roadgems.ml/get_all_potholes.php",
+        $.post("get_all_potholes.php",
         function(json) {
             holes = json["holes"];
             for (var i = 0; i < holes.length; i++) {
